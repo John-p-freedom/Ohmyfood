@@ -1,0 +1,30 @@
+@mixin Btn{
+    padding: 25px 40px;
+    background-image: linear-gradient(map-get($color,secondary),map-get($color,primary));
+    color: white;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    @include Shadow;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+@mixin Shadow{
+    box-shadow: 0 2px 5px grey;
+    &:hover{
+        box-shadow: 0 4px 5px grey;
+    }
+}
+@mixin wrap{
+    .Card__Comfirmation{
+        margin-right: -30px;
+        opacity: 1;
+        width: 7em;
+    }
+    .Card__Comfirmation__check{
+        transform: rotate(0);
+        width: 2em;
+        height: 2em;
+    }
+}

@@ -1,0 +1,229 @@
+@import "./Base/_Police";
+@import "./Utils/_Variable";
+@import "./Utils/_Mixin";
+@import"./Utils/_Keyframes";
+@import "./Layout/_BEM";
+.load{
+    &__page{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(white,0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: wait;
+        animation: load 2000ms 2000ms;
+        animation-fill-mode: both;
+        z-index: 10000;
+        &__text{
+            font-family: "Shrikhand";
+            font-size: 50px;
+            animation: text 1500ms backwards ease-in-out infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            @for $delay from 1 through 3{
+                &--#{$delay}{
+                    animation-delay: $anim * $delay;
+                }
+            }
+        }
+    }
+} 
+                                        /*Main*/
+main{
+    #Localisation{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: map-get($color,fond_localisation);
+        padding: 20px 0;
+        font-size: 1.5em;
+        #logo_Localisation{
+            margin-right: 20px;
+        }
+        .text_localisation{
+            margin-left: 20px;
+            font-size: 6em;
+        }
+    }
+    #Exploration{
+        text-align: center;
+        background-color: map-get($color,fond);
+        padding: 15px 0 50px;
+        font-size: 1.7em;
+        p{
+            font-size: 1.4em;
+        }
+        #btn_explore{
+            font-size: 1.1em;
+            @include Btn;
+        }
+    }
+}
+                                        /*Nav*/
+nav{
+    display: flex;
+    flex-direction: column;
+    .Title_Fonctionnement{
+        margin-top: 2em;
+        margin-left: 3%;
+        font-size: 3em;
+        font-weight: bold;
+    }
+    ol {
+        list-style: none;
+        counter-reset: counter-style;
+        margin-bottom: 4em;
+        li {
+            counter-increment: counter-style;
+        }
+        li::before {
+            content: counter(counter-style) "";
+            color: white;
+            font-weight: bold;
+            font-size: 1.7em;
+            border-radius: 50%;
+            background-color: map-get($color,primary);
+            padding: 5px 15px;
+            position: relative;
+            right: 1.4em;
+        }
+        .btn_Fonctionnement{
+            background-color: map-get($color,fond);
+            margin-bottom: 50px;
+            padding: 35px 40px 35px 10px;
+            border-radius: 50px;
+            width: 90%;
+            @include Shadow;
+            &:hover{
+                background-color: rgba(map-get($color,primary),0.1);
+            }
+            .icon_fonctionnement{
+                color: grey;
+            }
+            .text_fonctionnement{
+                font-weight: bold;
+                margin: 20px;
+                font-size: 2em;
+            }
+        }
+    }
+}
+                                        /*Section*/
+#select_card{
+    background-color: map-get($color,fond);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    #Explore{
+        font-size: 3em;
+        font-weight: bold;
+        width: 90%;
+    }
+    .Cards{
+        background-color: white;
+        border-radius: 20px;
+        height: 100%;
+        width: 90%;
+        margin: 30px;
+        @include Shadow;
+        .img_btn{
+            position: relative;
+        }
+        .photo_restaurant{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+        .new{
+            position: absolute;
+            top: 10%;
+            right: 3%;
+            background-color: map-get($color,tertiary);
+            color: green;
+            font-weight: bold;
+            font-size: 2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .bottom_card{
+            display: flex;
+            justify-content: space-between;
+            margin: 35px 30px 15px 20px;
+            .text_card{
+                line-height: 20px;
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main{
+        #Localisation{
+            font-size: initial;
+            .text_localisation{
+                font-size: initial;
+            }
+        }
+        #Exploration{
+            font-size: initial;
+            p{
+                font-size: initial;
+            }
+            #btn_explore{
+                font-size: initial;
+                @include Btn;
+            }
+        }
+    }
+    nav{
+        .Title_Fonctionnement{
+            font-size: 3em;
+            text-align: center;
+        }
+        ol {
+            display: flex;
+            justify-content: space-around;
+            li::before {
+                font-size: 1em;
+                padding: 5px 10px;
+                right: 1.4em;
+            }
+            .btn_Fonctionnement{
+                padding: 20px 10px;
+                width: 23%;
+                .text_fonctionnement{
+                    font-size: initial;
+                }
+            }
+        }
+    }
+    #select_card{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        #Explore{
+            font-size: 3em;
+            margin-left: 40%;
+        }
+        .Cards{
+            width: 30%;
+            .photo_restaurant{
+                height: 200px;
+            }
+            .new{
+                font-size: initial;
+            }
+            .bottom_card{
+                .text_card{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}

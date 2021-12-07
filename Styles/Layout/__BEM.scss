@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: initial;
+}
+                            /*Header*/
+header{
+    box-shadow: 0 0 5px grey;
+    padding: 20px 0;
+    position: relative;
+    .Logo_start{
+        font-family: "Shrikhand",Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0;
+        font-size: 4em;
+    }
+    .fa-long-arrow-alt-left{
+        position: absolute;
+        bottom: 0.5em;
+    }
+}
+                            /*Footer*/
+footer{
+    background-color: map-get($color,foot);
+    padding: 20px 0;
+    font-size: 2.3em;
+    .Logo_end{
+        filter: invert(100%);
+        margin-left: 3%;
+    }
+    ul{
+        list-style-type: none;
+        color: white;
+        li{
+            margin-bottom: 6px;
+            a{
+                color: white;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            .icon_foot_utensils{
+                margin-right: 11px;
+            }
+            .icon_foot_hands{
+                margin-right: 4px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    footer{
+        font-size: initial;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+                            /*Heart*/
+.icon_heart{
+height: 3em;
+width: 3em;
+background-color: transparent;
+border: transparent 0px solid;
+display:flex;
+align-items:center;
+justify-content:center;
+position: relative;
+background-color: black;
+    &:hover::before {
+        opacity: 1;
+    }
+    &::before {
+        opacity: 0;
+        transition: 0.5s;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background:linear-gradient(map-get($color,primary),map-get($color,secondary));
+    }
+}
+.fa-heart{
+transition-duration: .25s;
+background-color: white;
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+display:flex;
+align-items:center;
+justify-content:center;
+mix-blend-mode: lighten;
+}
+.icon_heart:hover {
+    .heart{
+    &__light{
+        opacity: 0;
+        }
+    }
+}

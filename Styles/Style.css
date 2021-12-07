@@ -1,0 +1,581 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url(Fonts/Shrikhand-Regular.otf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(Fonts/Roboto-Regular.ttf), url(Fonts/Roboto-Bold.ttf);
+}
+
+* {
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
+}
+
+strong {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+@-webkit-keyframes load {
+  100% {
+    visibility: hidden;
+    z-index: -10;
+  }
+}
+
+@keyframes load {
+  100% {
+    visibility: hidden;
+    z-index: -10;
+  }
+}
+
+@-webkit-keyframes text {
+  0% {
+    -webkit-transform: scaleY(0.5) translate(0, 0);
+            transform: scaleY(0.5) translate(0, 0);
+  }
+  25% {
+    -webkit-transform: scaleY(1) translate(0, -50px);
+            transform: scaleY(1) translate(0, -50px);
+  }
+  50% {
+    -webkit-transform: scaleY(0.5) translate(0, 0);
+            transform: scaleY(0.5) translate(0, 0);
+  }
+  75% {
+    -webkit-transform: scaleY(1) translate(0, -50px);
+            transform: scaleY(1) translate(0, -50px);
+  }
+  100% {
+    -webkit-transform: scaleY(1) translate(0, 0);
+            transform: scaleY(1) translate(0, 0);
+  }
+}
+
+@keyframes text {
+  0% {
+    -webkit-transform: scaleY(0.5) translate(0, 0);
+            transform: scaleY(0.5) translate(0, 0);
+  }
+  25% {
+    -webkit-transform: scaleY(1) translate(0, -50px);
+            transform: scaleY(1) translate(0, -50px);
+  }
+  50% {
+    -webkit-transform: scaleY(0.5) translate(0, 0);
+            transform: scaleY(0.5) translate(0, 0);
+  }
+  75% {
+    -webkit-transform: scaleY(1) translate(0, -50px);
+            transform: scaleY(1) translate(0, -50px);
+  }
+  100% {
+    -webkit-transform: scaleY(1) translate(0, 0);
+            transform: scaleY(1) translate(0, 0);
+  }
+}
+
+@-webkit-keyframes Card {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes Card {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+/*Header*/
+header {
+  -webkit-box-shadow: 0 0 5px grey;
+          box-shadow: 0 0 5px grey;
+  padding: 20px 0;
+  position: relative;
+}
+
+header .Logo_start {
+  font-family: "Shrikhand",Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+}
+
+header .fa-long-arrow-alt-left {
+  position: absolute;
+  bottom: 0.5em;
+}
+
+/*Footer*/
+footer {
+  background-color: #414141;
+  padding: 20px 0;
+  font-size: 2.3em;
+}
+
+footer .Logo_end {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  margin-left: 3%;
+}
+
+footer ul {
+  list-style-type: none;
+  color: white;
+}
+
+footer ul li {
+  margin-bottom: 6px;
+}
+
+footer ul li a {
+  color: white;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer ul li .icon_foot_utensils {
+  margin-right: 11px;
+}
+
+footer ul li .icon_foot_hands {
+  margin-right: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    font-size: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+/*Heart*/
+.icon_heart {
+  height: 3em;
+  width: 3em;
+  background-color: transparent;
+  border: transparent 0px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background-color: black;
+}
+
+.icon_heart:hover::before {
+  opacity: 1;
+}
+
+.icon_heart::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+
+.fa-heart {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+.icon_heart:hover .heart__light {
+  opacity: 0;
+}
+
+.load__page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: wait;
+  -webkit-animation: load 2000ms 2000ms;
+          animation: load 2000ms 2000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  z-index: 10000;
+}
+
+.load__page__text {
+  font-family: "Shrikhand";
+  font-size: 50px;
+  -webkit-animation: text 1500ms backwards ease-in-out infinite;
+          animation: text 1500ms backwards ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.load__page__text--1 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.load__page__text--2 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.load__page__text--3 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+/*Main*/
+main #Localisation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f3f3f3;
+  padding: 20px 0;
+  font-size: 1.5em;
+}
+
+main #Localisation #logo_Localisation {
+  margin-right: 20px;
+}
+
+main #Localisation .text_localisation {
+  margin-left: 20px;
+  font-size: 6em;
+}
+
+main #Exploration {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 15px 0 50px;
+  font-size: 1.7em;
+}
+
+main #Exploration p {
+  font-size: 1.4em;
+}
+
+main #Exploration #btn_explore {
+  font-size: 1.1em;
+  padding: 25px 40px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px grey;
+          box-shadow: 0 2px 5px grey;
+}
+
+main #Exploration #btn_explore:hover {
+  -webkit-box-shadow: 0 4px 5px grey;
+          box-shadow: 0 4px 5px grey;
+}
+
+main #Exploration #btn_explore:hover {
+  opacity: 0.9;
+}
+
+/*Nav*/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .Title_Fonctionnement {
+  margin-top: 2em;
+  margin-left: 3%;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+nav ol {
+  list-style: none;
+  counter-reset: counter-style;
+  margin-bottom: 4em;
+}
+
+nav ol li {
+  counter-increment: counter-style;
+}
+
+nav ol li::before {
+  content: counter(counter-style) "";
+  color: white;
+  font-weight: bold;
+  font-size: 1.7em;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 5px 15px;
+  position: relative;
+  right: 1.4em;
+}
+
+nav ol .btn_Fonctionnement {
+  background-color: #fafafa;
+  margin-bottom: 50px;
+  padding: 35px 40px 35px 10px;
+  border-radius: 50px;
+  width: 90%;
+  -webkit-box-shadow: 0 2px 5px grey;
+          box-shadow: 0 2px 5px grey;
+}
+
+nav ol .btn_Fonctionnement:hover {
+  -webkit-box-shadow: 0 4px 5px grey;
+          box-shadow: 0 4px 5px grey;
+}
+
+nav ol .btn_Fonctionnement:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+
+nav ol .btn_Fonctionnement .icon_fonctionnement {
+  color: grey;
+}
+
+nav ol .btn_Fonctionnement .text_fonctionnement {
+  font-weight: bold;
+  margin: 20px;
+  font-size: 2em;
+}
+
+/*Section*/
+#select_card {
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+#select_card #Explore {
+  font-size: 3em;
+  font-weight: bold;
+  width: 90%;
+}
+
+#select_card .Cards {
+  background-color: white;
+  border-radius: 20px;
+  height: 100%;
+  width: 90%;
+  margin: 30px;
+  -webkit-box-shadow: 0 2px 5px grey;
+          box-shadow: 0 2px 5px grey;
+}
+
+#select_card .Cards:hover {
+  -webkit-box-shadow: 0 4px 5px grey;
+          box-shadow: 0 4px 5px grey;
+}
+
+#select_card .Cards .img_btn {
+  position: relative;
+}
+
+#select_card .Cards .photo_restaurant {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+#select_card .Cards .new {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  background-color: #99E2D0;
+  color: green;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#select_card .Cards .bottom_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 35px 30px 15px 20px;
+}
+
+#select_card .Cards .bottom_card .text_card {
+  line-height: 20px;
+  font-size: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+  main #Localisation {
+    font-size: initial;
+  }
+  main #Localisation .text_localisation {
+    font-size: initial;
+  }
+  main #Exploration {
+    font-size: initial;
+  }
+  main #Exploration p {
+    font-size: initial;
+  }
+  main #Exploration #btn_explore {
+    font-size: initial;
+    padding: 25px 40px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 5px grey;
+            box-shadow: 0 2px 5px grey;
+  }
+  main #Exploration #btn_explore:hover {
+    -webkit-box-shadow: 0 4px 5px grey;
+            box-shadow: 0 4px 5px grey;
+  }
+  main #Exploration #btn_explore:hover {
+    opacity: 0.9;
+  }
+  nav .Title_Fonctionnement {
+    font-size: 3em;
+    text-align: center;
+  }
+  nav ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  nav ol li::before {
+    font-size: 1em;
+    padding: 5px 10px;
+    right: 1.4em;
+  }
+  nav ol .btn_Fonctionnement {
+    padding: 20px 10px;
+    width: 23%;
+  }
+  nav ol .btn_Fonctionnement .text_fonctionnement {
+    font-size: initial;
+  }
+  #select_card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #select_card #Explore {
+    font-size: 3em;
+    margin-left: 40%;
+  }
+  #select_card .Cards {
+    width: 30%;
+  }
+  #select_card .Cards .photo_restaurant {
+    height: 200px;
+  }
+  #select_card .Cards .new {
+    font-size: initial;
+  }
+  #select_card .Cards .bottom_card .text_card {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=Style.css.map */
