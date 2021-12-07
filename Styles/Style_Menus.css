@@ -38,7 +38,7 @@ header .Logo_start {
   font-family: "Shrikhand",Arial, Helvetica, sans-serif;
   text-align: center;
   margin: 0;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 header .fa-long-arrow-alt-left {
@@ -271,7 +271,6 @@ main .Total_menus .Title_menus {
 
 main .Total_menus .Title_menus h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 4em;
   margin-top: 1.5em;
 }
 
@@ -293,8 +292,8 @@ main .Total_menus .Total_cards {
 }
 
 main .Total_menus .Total_cards .Subtitle_Menus {
-  font-size: 3em;
   width: 90%;
+  font-size: 1.5em;
 }
 
 main .Total_menus .Total_cards .Subtitle_Menus p {
@@ -306,11 +305,10 @@ main .Total_menus .Total_cards .Card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 2.3em;
   background-color: white;
   border-radius: 50px;
   margin: 1em;
-  width: 90%;
+  width: 85%;
   cursor: pointer;
   padding: 25px 30px 0 20px;
   -webkit-transform: scale(0);
@@ -459,7 +457,6 @@ main .Total_menus .Total_cards .Card__Comfirmation__check {
 
 main .Total_menus .Total_cards #btn {
   margin-top: 2.5em;
-  font-size: 2em;
   padding: 25px 40px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
