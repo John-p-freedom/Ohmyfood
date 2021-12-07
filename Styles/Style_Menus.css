@@ -50,7 +50,6 @@ header .fa-long-arrow-alt-left {
 footer {
   background-color: #414141;
   padding: 20px 0;
-  font-size: 2.3em;
 }
 
 footer .Logo_end {
@@ -86,7 +85,6 @@ footer ul li .icon_foot_hands {
 
 @media screen and (min-width: 1024px) {
   footer {
-    font-size: initial;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -97,8 +95,8 @@ footer ul li .icon_foot_hands {
 
 /*Heart*/
 .icon_heart {
-  height: 3em;
   width: 3em;
+  height: 3em;
   background-color: transparent;
   border: transparent 0px solid;
   display: -webkit-box;
