@@ -99,6 +99,9 @@ nav{
             @include Shadow;
             &:hover{
                 background-color: rgba(map-get($color,primary),0.1);
+                .icon_fonctionnement{
+                    color: map-get($color,primary);
+                }
             }
             .icon_fonctionnement{
                 color: grey;

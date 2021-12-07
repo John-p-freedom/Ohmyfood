@@ -409,6 +409,10 @@ nav ol .btn_Fonctionnement:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
 
+nav ol .btn_Fonctionnement:hover .icon_fonctionnement {
+  color: #9356DC;
+}
+
 nav ol .btn_Fonctionnement .icon_fonctionnement {
   color: grey;
 }
