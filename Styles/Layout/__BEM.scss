@@ -57,6 +57,7 @@ footer{
 }
                             /*Heart*/
 .icon_heart{
+    top: 10px;
     width: 3em;
     height: 3em;
     background-color: transparent;
@@ -66,6 +67,7 @@ footer{
     justify-content:center;
     position: relative;
     background-color: black;
+    border-radius: 50%;
     &:hover::before {
         opacity: 1;
     }
@@ -84,6 +86,7 @@ footer{
 .fa-heart{
 transition-duration: .25s;
 background-color: white;
+border-radius: 50%;
 position: absolute;
 top: 0;
 left: 0;

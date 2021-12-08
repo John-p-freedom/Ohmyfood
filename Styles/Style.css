@@ -181,6 +181,7 @@ footer ul li .icon_foot_hands {
 
 /*Heart*/
 .icon_heart {
+  top: 10px;
   width: 3em;
   height: 3em;
   background-color: transparent;
@@ -196,6 +197,7 @@ footer ul li .icon_foot_hands {
           justify-content: center;
   position: relative;
   background-color: black;
+  border-radius: 50%;
 }
 
 .icon_heart:hover::before {
@@ -220,6 +222,7 @@ footer ul li .icon_foot_hands {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
   background-color: white;
+  border-radius: 50%;
   position: absolute;
   top: 0;
   left: 0;
@@ -407,7 +410,7 @@ nav ol .btn_Fonctionnement .icon_fonctionnement {
 
 nav ol .btn_Fonctionnement .text_fonctionnement {
   font-weight: bold;
-  margin: 20px;
+  margin: 10px;
 }
 
 /*Section*/
