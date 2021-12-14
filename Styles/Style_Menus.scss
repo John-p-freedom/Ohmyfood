@@ -49,7 +49,7 @@ main{
                 padding: 20px 30px 0 20px;
                 transform: scale(0);
                 @include Shadow;
-                animation: Card 2000ms backwards ease-in-out 2000ms;
+                animation: Card 1500ms backwards ease-in-out 1500ms;
                 animation-fill-mode: both;
                 @for $live from 1 through 10{
                     &--#{$live}{

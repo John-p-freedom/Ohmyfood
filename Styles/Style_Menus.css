@@ -319,8 +319,8 @@ main .Total_menus .Total_cards .Card {
           transform: scale(0);
   -webkit-box-shadow: 0 2px 5px grey;
           box-shadow: 0 2px 5px grey;
-  -webkit-animation: Card 2000ms backwards ease-in-out 2000ms;
-          animation: Card 2000ms backwards ease-in-out 2000ms;
+  -webkit-animation: Card 1500ms backwards ease-in-out 1500ms;
+          animation: Card 1500ms backwards ease-in-out 1500ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -331,53 +331,53 @@ main .Total_menus .Total_cards .Card:hover {
 }
 
 main .Total_menus .Total_cards .Card--1 {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
 }
 
 main .Total_menus .Total_cards .Card--2 {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 main .Total_menus .Total_cards .Card--3 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+
+main .Total_menus .Total_cards .Card--4 {
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
 }
 
-main .Total_menus .Total_cards .Card--4 {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-}
-
 main .Total_menus .Total_cards .Card--5 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
 }
 
 main .Total_menus .Total_cards .Card--6 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+main .Total_menus .Total_cards .Card--7 {
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+
+main .Total_menus .Total_cards .Card--8 {
   -webkit-animation-delay: 1200ms;
           animation-delay: 1200ms;
 }
 
-main .Total_menus .Total_cards .Card--7 {
-  -webkit-animation-delay: 1400ms;
-          animation-delay: 1400ms;
-}
-
-main .Total_menus .Total_cards .Card--8 {
-  -webkit-animation-delay: 1600ms;
-          animation-delay: 1600ms;
-}
-
 main .Total_menus .Total_cards .Card--9 {
-  -webkit-animation-delay: 1800ms;
-          animation-delay: 1800ms;
+  -webkit-animation-delay: 1350ms;
+          animation-delay: 1350ms;
 }
 
 main .Total_menus .Total_cards .Card--10 {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
 
 main .Total_menus .Total_cards .Card:hover .Card__Comfirmation {
